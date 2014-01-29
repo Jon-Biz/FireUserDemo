@@ -11,12 +11,15 @@
 </head>
 <body ng-app="FireUserDemo" ng-controller="Main">
 	<h1 id="pageTitle">Fire User Demo</h1>
-	<div id='status'>{{loginstatus}}</div>
-	<fireuserlogin type='github'></fireuserlogin>
-	<fireuserlogin type='facebook'></fireuserlogin>
-	<fireuserlogin type='twitter'></fireuserlogin>
+	<div class='pull-right' id='status'>{{loginstatus}}</div>
+	<fireuserlogin type='github' class='fa-2x'></fireuserlogin>
+	<fireuserlogin type='facebook' class='fa-2x'></fireuserlogin>
+	<fireuserlogin type='twitter' class='fa-2x'></fireuserlogin>
 
-	<fireuserloginform ></fireuserloginform>
+	<fireuserloginform></fireuserloginform>
+	<fireuserlogout/></fireuserlogout>
+
+</body>
     <script src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
@@ -25,6 +28,4 @@
 	<script src="bower_components/fireuser/FireUser.js"></script>
 
 	<script src="scripts/app.js"></script>
-
-</body>
 </html>
