@@ -6,15 +6,19 @@ angular.module('fireUser').value('FireUserConfig',{
     });
 
 angular.module('FireUserDemo', ['fireUser'])
-  .controller('Main',function ($scope) {
-
+  .controller('Main',function ($scope, $rootScope) {
+    $rootScope.loginstate = false;
     $scope.loginstatus = 'not logged in'
 
     $scope.$on('fireuser:login',function () {
       $scope.loginstatus = 'logged in'
+      $rootScope.loginstate = true;
     })
 
     $scope.$on('fireuser:logout',function () {
       $scope.loginstatus = 'not logged in'
+      $rootScope.loginstate = false;
+      $rootScope.FireUser.userdata = ""
+
     })
   })
