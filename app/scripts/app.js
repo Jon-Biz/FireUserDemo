@@ -10,8 +10,9 @@ angular.module('FireUserDemo', ['fireUser'])
     $rootScope.loginstate = false;
     $scope.loginstatus = 'not logged in'
 
-    $scope.$on('fireuser:login',function () {
-      $scope.loginstatus = 'logged in'
+    $scope.$on('fireuser:login',function (evt,user) {
+
+      $scope.loginstatus = 'user '+user.username+' logged in'
       $rootScope.loginstate = true;
     })
 
