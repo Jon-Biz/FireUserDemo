@@ -2,6 +2,8 @@
 
 angular.module('fireUser').value('FireUserConfig',{
     url:"https://fireuser.firebaseio.com/",
+    datalocation:"FireUser",
+    userdata:"data",
     iconCss:'fontawesome'
     });
 
@@ -19,7 +21,6 @@ angular.module('FireUserDemo', ['fireUser'])
     $scope.$on('fireuser:logout',function () {
       $scope.loginstatus = 'not logged in'
       $rootScope.loginstate = false;
-      $rootScope.FireUser.userdata = ""
 
     })
   })
