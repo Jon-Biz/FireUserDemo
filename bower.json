@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "fireuser": "*",
+    "fireuser": "~0.3.0",
     "angular-route": "~1.2.10",
     "angular": "~1.2.10",
     "bootstrap": "~3.0.3",
